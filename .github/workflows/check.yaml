@@ -102,7 +102,7 @@ jobs:
         env:
           PYO3_CROSS_LIB_DIR: /opt/python/${{ matrix.python.abi }}/lib
         with:
-          maturin-version: latest
+          manylinux: auto
           command: build
 #          args: --release --out dist --no-sdist
           target: ${{ matrix.target }}
