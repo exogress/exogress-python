@@ -93,6 +93,6 @@ jobs:
         with:
           maturin-version: latest
           command: build
-          args: -i python3.9 --release --out dist --no-sdist
+          args: --release --out dist --no-sdist
           target: ${{ matrix.target }}
 #          args: --release
