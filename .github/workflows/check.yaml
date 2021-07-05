@@ -87,6 +87,10 @@ jobs:
         with:
           submodules: true
 
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
       - uses: messense/maturin-action@v1
         env:
           PYO3_CROSS_LIB_DIR: /opt/python/${{ matrix.python.abi }}/lib
