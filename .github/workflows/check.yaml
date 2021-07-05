@@ -93,6 +93,6 @@ jobs:
         with:
           maturin-version: latest
           command: build
-          args: --release --out dist --no-sdist
+#          args: --release --out dist --no-sdist
           target: ${{ matrix.target }}
 #          args: --release
