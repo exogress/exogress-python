@@ -71,6 +71,11 @@ jobs:
   build-manylinux:
     runs-on: ubuntu-latest
     needs: lint
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [aarch64-unknown-linux-gnu, arm-unknown-linux-gnueabi, armv7-unknown-linux-gnueabihf, x86_64-unknown-linux-gnu]
+
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -88,4 +93,5 @@ jobs:
         with:
           maturin-version: latest
           command: build
-          args: --release
+          target: ${{ matrix.target }}
+#          args: --release
