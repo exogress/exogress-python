@@ -8,5 +8,5 @@ name = "exogress"
 #    "Programming Language :: Python",
 #    "Programming Language :: Rust"
 #]
-requires-python = ">=3.7"
+requires-python = ">=3.6"
 description = "Exogress Client for Python"
